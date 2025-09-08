@@ -25,7 +25,7 @@ Easily convert any text, number, or link into a QR code, preview it, and save it
 sudo apt update
 sudo apt install python3 python3-pip python3-tk -y
 pip install qrcode[pil] pillow pyfiglet colorama
-git clone https://github.com/your-username/qr-generator-tool.git
+git clone https://github.com/rabiulwebdev/qr-generator-tool.git
 cd qr-generator-tool
 python3 qr_generator.py
 ```
@@ -34,12 +34,12 @@ python3 qr_generator.py
 1. **Install dependencies & run**
 ```bash
 pkg update && pkg upgrade -y
-pkg install python -y
+pkg install python git -y
 pip install qrcode[pil] pillow pyfiglet colorama
-pkg install -y git
-git clone https://github.com/your-username/qr-generator-tool.git
+git clone https://github.com/rabiulwebdev/qr-generator-tool.git
 cd qr-generator-tool
 python qr_generator.py
+
 ```
 ```bash
 curl -s https://raw.githubusercontent.com/your-username/qr-generator-tool/main/install.sh | bash
@@ -54,7 +54,7 @@ Download from python.org
 Install dependencies & run
 ```bash
 pip install qrcode[pil] pillow pyfiglet colorama
-git clone https://github.com/your-username/qr-generator-tool.git
+git clone https://github.com/rabiulwebdev/qr-generator-tool.git
 cd qr-generator-tool
 python qr_generator.py
 ```
