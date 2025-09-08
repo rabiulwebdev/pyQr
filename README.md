@@ -25,24 +25,9 @@ Easily convert any text, number, or link into a QR code, preview it, and save it
 sudo apt update
 sudo apt install python3 python3-pip python3-tk -y
 pip install qrcode[pil] pillow pyfiglet colorama
-git clone https://github.com/rabiulwebdev/qr-generator-tool.git
+git clone https://github.com/rabiulwebdev/pyQr.git
 cd qr-generator-tool
 python3 qr_generator.py
-```
-
-### 🐧 Termux (Android)
-1. **Install dependencies & run**
-```bash
-pkg update && pkg upgrade -y
-pkg install python git -y
-pip install qrcode[pil] pillow pyfiglet colorama
-git clone https://github.com/rabiulwebdev/qr-generator-tool.git
-cd qr-generator-tool
-python qr_generator.py
-
-```
-```bash
-curl -s https://raw.githubusercontent.com/your-username/qr-generator-tool/main/install.sh | bash
 ```
 
 ### 🪟 Windows (PowerShell)
@@ -54,7 +39,7 @@ Download from python.org
 Install dependencies & run
 ```bash
 pip install qrcode[pil] pillow pyfiglet colorama
-git clone https://github.com/rabiulwebdev/qr-generator-tool.git
+git clone https://github.com/rabiulwebdev/pyQr.git
 cd qr-generator-tool
 python qr_generator.py
 ```
