@@ -1,16 +1,22 @@
-import tkinter as tk
-from tkinter import filedialog, messagebox
-
-import pyfiglet
+import platform
 import qrcode
+import pyfiglet
 from colorama import Fore, Style
-from PIL import Image, ImageTk
+
+# Try importing Tkinter (GUI), but ignore if not available
+try:
+    import tkinter as tk
+    from tkinter import filedialog, messagebox
+    from PIL import Image, ImageTk
+    GUI_AVAILABLE = True
+except ImportError:
+    GUI_AVAILABLE = False
 
 
 # ------------------ CLI Mode ------------------
 def cli_banner():
     print(Fore.CYAN + pyfiglet.figlet_format("QR Generator"))
-    print(Fore.YELLOW + "Created by: rabiulwebdev")
+    print(Fore.YELLOW + "Created by: Rabiulwebdev")
     print(Fore.GREEN + "Generate QR codes easily from text, numbers, or links\n" + Style.RESET_ALL)
 
 
@@ -90,16 +96,18 @@ def gui_mode():
 
 # ------------------ MAIN ------------------
 if __name__ == "__main__":
-    print(Fore.MAGENTA + "\nChoose mode:")
-    print("[1] GUI Mode (Desktop App)")
-    print("[2] CLI Mode (Terminal Tool)\n" + Style.RESET_ALL)
-    mode = input(Fore.YELLOW + "Enter choice: " + Style.RESET_ALL)
-
-    if mode == "1":
-        gui_mode()
-    elif mode == "2":
+    if not GUI_AVAILABLE or "termux" in platform.system().lower():
+        # Termux or no Tkinter → run CLI only
         cli_mode()
     else:
-        print(Fore.RED + "Invalid choice! Exiting..." + Style.RESET_ALL)
-        print(Fore.RED + "Invalid choice! Exiting..." + Style.RESET_ALL)
-        print(Fore.RED + "Invalid choice! Exiting..." + Style.RESET_ALL)
+        print(Fore.MAGENTA + "\nChoose mode:")
+        print("[1] GUI Mode (Desktop App)")
+        print("[2] CLI Mode (Terminal Tool)\n" + Style.RESET_ALL)
+        mode = input(Fore.YELLOW + "Enter choice: " + Style.RESET_ALL)
+
+        if mode == "1":
+            gui_mode()
+        elif mode == "2":
+            cli_mode()
+        else:
+            print(Fore.RED + "Invalid choice! Exiting..." + Style.RESET_ALL)
