@@ -90,7 +90,7 @@ def gui_mode():
 
 # ------------------ MAIN ------------------
 if __name__ == "__main__":
-    print(Fore.MAGENTA + "\nChoose mode:")
+    print(Fore.CYAN + "\nChoose mode:")
     print("[1] GUI Mode (Desktop App)")
     print("[2] CLI Mode (Terminal Tool)\n" + Style.RESET_ALL)
     mode = input(Fore.YELLOW + "Enter choice: " + Style.RESET_ALL)
