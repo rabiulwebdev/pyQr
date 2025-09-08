@@ -26,8 +26,8 @@ sudo apt update
 sudo apt install python3 python3-pip python3-tk -y
 pip install qrcode[pil] pillow pyfiglet colorama
 git clone https://github.com/rabiulwebdev/pyQr.git
-cd qr-generator-tool
-python3 qr_generator.py
+cd pyQr
+python3 pyQr.py
 ```
 
 ### 🪟 Windows (PowerShell)
@@ -40,8 +40,8 @@ Install dependencies & run
 ```bash
 pip install qrcode[pil] pillow pyfiglet colorama
 git clone https://github.com/rabiulwebdev/pyQr.git
-cd qr-generator-tool
-python qr_generator.py
+cd pyQr
+python pyQr.py
 ```
 🚀 **Usage**
 When you run the tool, you will see:
