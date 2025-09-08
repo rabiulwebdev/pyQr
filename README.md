@@ -34,11 +34,15 @@ python3 qr_generator.py
 1. **Install dependencies & run**
 ```bash
 pkg update && pkg upgrade -y
-pkg install python git -y
+pkg install python -y
 pip install qrcode[pil] pillow pyfiglet colorama
+pkg install -y git
 git clone https://github.com/your-username/qr-generator-tool.git
 cd qr-generator-tool
 python qr_generator.py
+```
+```bash
+curl -s https://raw.githubusercontent.com/your-username/qr-generator-tool/main/install.sh | bash
 ```
 
 ### 🪟 Windows (PowerShell)
